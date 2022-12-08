@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+<!-- bean definitions here -->
+
+<!-- ============ Setter Injection ============ -->
+<bean id="stud1" class="com.dto.Student">
+<property name="id" value ="122"></property>
+<property name="name" value ="shubhagi"></property>
+<property name="email" value ="shubh@gmail.com"></property>
+</bean>
+
+
+<bean id="stud2" class="com.dto.Student" primary="true">
+<property name="id" value ="123"></property>
+<property name="name" value ="Nikita"></property>
+<property name="email" value ="nik21@gmail.com"></property>
+</bean>
+
+<!-- ============ Constructor Injection ============ -->
+<bean id="ad1" class="com.dto.Admin">
+<constructor-arg value ="111"></constructor-arg>
+<constructor-arg value ="yuu21@gmail.com"></constructor-arg>
+</bean>
+
+<bean id="ad2" class="com.dto.Admin" primary="true">
+<constructor-arg value ="222"></constructor-arg>
+<constructor-arg value ="gjk3@gmail.com"></constructor-arg>
+</bean>
+</beans>
